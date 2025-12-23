@@ -49,4 +49,7 @@ name: Publish to Docker Hub
     - main
     - github-actions
     - multiarch
+    paths-ignore: # Exclude specific paths from triggering the workflow
+    - 'README.md'
+    - '.github/workflows/test.yml'
   workflow_dispatch: {}
