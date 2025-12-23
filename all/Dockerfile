@@ -24,10 +24,10 @@ RUN set -ex \
 # Stage 2: Final image
 FROM python:3.14.1-slim
 
-WORKDIR /app
+WORKDIR /opt/octodns
 
 # Copy installed environment from build stage
-COPY --from=build /app /app
+COPY --from=build /opt/octodns /opt/octodns
 
 ENV PATH=/opt/octodns/env/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 CMD [ "/bin/sh" ]
