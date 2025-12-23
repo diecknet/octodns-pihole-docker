@@ -3,6 +3,7 @@ FROM python:3.14.1-slim AS build
 WORKDIR /opt/octodns
 
 RUN apt-get update && apt-get install -y git
+RUN git config --global credential.helper "/bin/true"
 
 COPY requirements.txt all-requirements.txt
 
