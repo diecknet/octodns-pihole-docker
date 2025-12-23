@@ -42,7 +42,7 @@ jobs:
       matrix:
         flavor:
         - pihole
-name: Publish to Docker Hub
+name: Publish to ghcr.io
 'on':
   push:
     branches:
