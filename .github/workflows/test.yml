@@ -36,32 +36,7 @@ jobs:
     strategy:
       matrix:
         flavor:
-        - azure
-        - bind
-        - cloudflare
-        - constellix
-        - digitalocean
-        - dnsimple
-        - dnsmadeeasy
-        - dyn
-        - easydns
-        - edgecenter
-        - edgedns
-        - etchosts
-        - gandi
-        - gcore
-        - googlecloud
-        - hetzner
-        - mythicbeasts
-        - ns1
-        - octodns
-        - ovh
-        - powerdns
-        - rackspace
-        - route53
-        - selectel
-        - transip
-        - ultra
+        - pihole
 name: Test
 'on':
   pull_request:

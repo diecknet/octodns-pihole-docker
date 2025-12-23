@@ -26,3 +26,4 @@ octodns-selectel==1.0.0
 octodns-spf==1.0.0
 octodns-transip==1.0.1
 octodns-ultra==1.0.0
+git+https://git@github.com/octodns/octodns-pihole.git@aa70a418bc95c664f3cbcdaca25a490709b5d2e9#egg=octodns_pihole
