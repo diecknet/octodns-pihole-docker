@@ -22,6 +22,9 @@ RUN set -ex \
   && pip install --upgrade pip \
   && git config --global credential.helper "" \
   && git config --global url."https://github.com/".insteadOf "git@github.com:" \
+  # NOTE: SSL verification bypass is required in GitHub Actions CI environment
+  # due to self-signed certificates in the certificate chain. In production
+  # environments, proper CA certificates should be used instead.
   && GIT_SSL_NO_VERIFY=1 GIT_TERMINAL_PROMPT=0 pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --no-cache-dir -r requirements.txt
 
 # Stage 2: Final image
