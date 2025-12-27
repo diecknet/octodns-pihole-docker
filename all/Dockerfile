@@ -1,4 +1,4 @@
-FROM python:3.14.1-slim AS build
+FROM python:3.14.2-slim AS build
 
 WORKDIR /opt/octodns
 
@@ -22,7 +22,7 @@ RUN set -ex \
   && pip install --no-cache-dir -r requirements.txt
 
 # Stage 2: Final image
-FROM python:3.14.1-slim
+FROM python:3.14.2-slim
 
 WORKDIR /opt/octodns
 
